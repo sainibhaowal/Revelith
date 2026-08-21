@@ -1,0 +1,11 @@
+<svg width="600" height="120" viewBox="0 0 600 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Modern Geometric Revelith Monogram Icon -->
+  <g transform="translate(10, 10)">
+    <rect width="100" height="100" rx="24" fill="black" />
+    <path d="M30 28H56C68.1503 28 78 37.8497 78 50C78 62.1503 68.1503 72 56 72H45V82H30V28ZM45 40V60H55C60.5228 60 65 55.5228 65 50C65 44.4772 60.5228 40 55 40H45Z" fill="white" />
+    <path d="M54 58L72 82H55L42 64H50L54 58Z" fill="white" />
+  </g>
+  <!-- Clean Modern Typography: ReveLith Office -->
+  <text x="130" y="65" fill="black" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="44" font-weight="700" letter-spacing="-0.5">ReveLith</text>
+  <text x="132" y="93" fill="#666666" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="600" letter-spacing="3">OFFICE</text>
+</svg>

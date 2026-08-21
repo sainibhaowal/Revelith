@@ -1,0 +1,13 @@
+# Ignore Electron & build artifacts
+node_modules
+out/
+dist/
+*.db
+*.sqlite
+
+# Ignore IDE & log files
+.vscode/
+*.log
+
+# Ignore generated test reports
+.task/
