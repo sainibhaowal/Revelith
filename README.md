@@ -48,7 +48,7 @@ Ready to use ReveLith on your computer? Download the pre-built installer for you
 
 ## Architecture & Fidelity Model
 
-Revelith uses a unique non-destructive patching model. Traditional editors re-serialize the entire file upon saving, which often degrades templates, macros, and complex document structures. Revelith protects the original source of truth:
+ReveLith uses a unique non-destructive patching model. Traditional editors re-serialize the entire file upon saving, which often degrades templates, macros, and complex document structures. ReveLith protects the original source of truth:
 
 ```
 [Open Document] ───► Fingerprint and archive original file state
@@ -122,7 +122,7 @@ npm run dist:linux    # Linux (.AppImage, .deb, .rpm)
 
 ## Security & Privacy
 
-Revelith is engineered with zero-trust local boundaries:
+ReveLith is engineered with zero-trust local boundaries:
 * **Sandboxed Renderers**: Strict Electron process isolation and context segregation.
 * **Safe IPC Layer**: Fully validated remote schema communication between GUI layers and system sidecars.
 * **No Unsolicited Telemetry**: Your files, prompts, and edits stay strictly on your local hardware.
