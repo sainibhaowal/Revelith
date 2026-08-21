@@ -131,7 +131,7 @@ ReveLith is engineered with zero-trust local boundaries:
 
 ## Acknowledgments & Credits
 
-ReveLith is developed, engineered, and maintained by [Ravin](https://github.com/sainibhaowal).
+ReveLith is developed, engineered, and maintained by [Ravinder Singh](https://github.com/sainibhaowal).
 
 We would like to acknowledge and extend gratitude to:
 * **The Genspark / GenOffice Team**: For early explorations, tools, and open architectural foundations that inspired parts of this document suite.

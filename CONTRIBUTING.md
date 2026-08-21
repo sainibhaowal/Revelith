@@ -1,6 +1,6 @@
 # Contributing to ReveLith
 
-Hi! I'm Ravin, the creator and maintainer of ReveLith. 
+Hi! I'm Ravinder Singh, the creator and maintainer of ReveLith. 
 
 ReveLith is an independent, open-source project. Whether you are reporting a bug, suggesting a new feature, or submitting a code improvement, all contributions are welcome!
 
