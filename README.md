@@ -129,6 +129,16 @@ ReveLith is engineered with zero-trust local boundaries:
 
 ---
 
+## Acknowledgments & Credits
+
+ReveLith is developed, engineered, and maintained by [Ravin](https://github.com/sainibhaowal).
+
+We would like to acknowledge and extend gratitude to:
+* **The Genspark / GenOffice Team**: For early explorations, tools, and open architectural foundations that inspired parts of this document suite.
+* **The Open-Source Community**: For the foundational tools powering our desktop engine, including **Electron**, **Rust**, **Fast-XML-Parser**, **PDFium**, and **Vitest**.
+
+---
+
 ## License & Trademarks
 
 ReveLith is open-source software licensed under the [GNU Affero General Public License v3.0 (AGPLv3)](LICENSE).
