@@ -254,7 +254,9 @@ const config = {
     ],
     extraResources: [
       {
-        from: '../sheets/native/xlsx-engine/target/x86_64-pc-windows-gnu/release/xlsx-sidecar.exe',
+        from: existsSync(join(__dirname, '../sheets/native/xlsx-engine/target/x86_64-pc-windows-gnu/release/xlsx-sidecar.exe'))
+          ? '../sheets/native/xlsx-engine/target/x86_64-pc-windows-gnu/release/xlsx-sidecar.exe'
+          : '../sheets/native/xlsx-engine/target/release/xlsx-sidecar.exe',
         to: 'native/xlsx-sidecar.exe',
       },
     ],
