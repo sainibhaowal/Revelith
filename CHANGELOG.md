@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.1](https://github.com/sainibhaowal/ReveLith/compare/revelith-v1.1.0...revelith-v1.1.1) (2026-08-21)
+
+
+### Bug Fixes
+
+* **release:** fix Ubuntu libasound dependency, macOS optional rollup binary, and Windows sidecar & repository detection ([1341365](https://github.com/sainibhaowal/ReveLith/commit/13413653d68059f105fe84addb8bf6a6be4ed32e))
+* **release:** fix Ubuntu libasound dependency, macOS rollup … ([2f7c675](https://github.com/sainibhaowal/ReveLith/commit/2f7c6756669d3c5ab4fb10191d476f21187e7446))
+
 ## [1.1.0](https://github.com/sainibhaowal/ReveLith/compare/revelith-v1.0.0...revelith-v1.1.0) (2026-08-21)
 
 
