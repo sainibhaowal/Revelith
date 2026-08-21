@@ -81,4 +81,4 @@ npm run dist:linux    # Linux package (.AppImage, .deb)
 
 ## License
 
-ReveLith is open-source under the **GNU AGPLv3** license. By submitting a pull request, you agree that your contributions will also be licensed under the [GNU AGPLv3](LICENSE).
+ReveLith is open-source under the **Apache License, Version 2.0**. By submitting a pull request, you agree that your contributions will also be licensed under the [Apache-2.0 License](LICENSE).

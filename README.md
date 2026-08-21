@@ -141,6 +141,6 @@ We would like to acknowledge and extend gratitude to:
 
 ## License & Trademarks
 
-ReveLith is open-source software licensed under the [GNU Affero General Public License v3.0 (AGPLv3)](LICENSE).
+ReveLith is open-source software licensed under the [Apache License, Version 2.0](LICENSE).
 
 *The "ReveLith" name, logos, brand assets, and custom UI icons are proprietary trademarks of the author and may not be used in derivative works without prior written consent.*
