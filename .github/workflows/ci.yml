@@ -22,13 +22,8 @@ jobs:
         run: npm ci
       - name: Theme colors (CI enforced)
         run: npm run check:theme-colors
-      # Typecheck per workspace. pptx-engine is excluded: it fails on missing
-      # pptxgenjs type declarations (pre-existing, tracked separately).
       - name: Typecheck
-        run: |
-          for ws in i18n electron-utils font-metrics docx-engine file-parse pptx-render ai-search agent-core ai-provider project-store ui docs sheets shell slides markdown; do
-            npm run typecheck -w "@revelith/$ws"
-          done
+        run: npm run typecheck
 
   tests:
     name: Tests
@@ -43,13 +38,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
         shell: bash
-      # Full `npm test` includes suites with pre-existing failures on a clean
-      # checkout: pptx-engine, pdf, electron-utils, ai-provider, ai-search,
-      # docs. Run the known-green suites here so CI stays green and catches
-      # new regressions.
-      - name: Unit tests
+      - name: Run Test Suites
         shell: bash
-        run: |
-          for ws in i18n font-metrics docx-engine file-parse pptx-render agent-core project-store shell slides markdown sheets; do
-            npm run test -w "@revelith/$ws"
-          done
+        run: npm run test
