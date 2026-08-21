@@ -3,7 +3,11 @@
   "productName": "Revelith",
   "version": "0.6.0",
   "license": "Apache-2.0",
-  "homepage": "https://github.com/sainibhaowal/Revelith",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sainibhaowal/ReveLith.git"
+  },
+  "homepage": "https://github.com/sainibhaowal/ReveLith",
   "private": true,
   "description": "Unified Revelith shell: one app hosting the docs and sheets modules behind a home/launcher window",
   "main": "out/main/index.js",
