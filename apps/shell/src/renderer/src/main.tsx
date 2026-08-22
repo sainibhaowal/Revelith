@@ -37,7 +37,13 @@ if (!window.aiOffice) {
   window.aiOffice = {
     getLanguage: async () => 'en',
     onboardingSeen: async () => true,
-    getTheme: async () => 'dark',
+    getTheme: async () => {
+      const stored = localStorage.getItem('revelith.theme')
+      return (stored as any) || 'system'
+    },
+    setTheme: async (th: any) => {
+      localStorage.setItem('revelith.theme', th)
+    },
     onThemeChanged: () => () => {},
     recents: async () => ({ entries: [], total: 0, totalAll: 0 }),
     starred: async () => ({ entries: [], total: 0, totalAll: 0 }),

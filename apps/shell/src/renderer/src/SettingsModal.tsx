@@ -811,9 +811,19 @@ export function SettingsModal({
 
   const applyTheme = (next: UiTheme) => {
     setTheme(next)
+    try {
+      localStorage.setItem('revelith.theme', next)
+    } catch {}
     void window.aiOffice?.setTheme?.(next)
     if (next === 'system') document.documentElement.removeAttribute('data-theme')
     else document.documentElement.setAttribute('data-theme', next)
+    // Broadcast to any active editor iframes
+    const iframes = document.querySelectorAll('iframe')
+    iframes.forEach((f) => {
+      try {
+        f.contentWindow?.postMessage({ type: 'theme-change', theme: next }, '*')
+      } catch {}
+    })
   }
 
   const changeSaveDir = () => {

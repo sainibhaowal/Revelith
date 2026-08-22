@@ -143,13 +143,22 @@ void (async () => {
       getTimeline: async () => [],
     }
   }
+  const urlParams = new URLSearchParams(window.location.search)
+  const paramTheme = urlParams.get('theme') as UiTheme | null
   const [lang, theme] = await Promise.all([
     window.markdownApi.getLanguage().catch(() => 'en' as const),
-    window.markdownApi.getTheme().catch(() => 'system' as const),
+    paramTheme
+      ? Promise.resolve(paramTheme)
+      : window.markdownApi.getTheme().catch(() => 'system' as const),
   ])
   document.documentElement.lang = htmlLang(lang as Lang)
   applyTheme(theme)
   window.markdownApi.onThemeChanged(applyTheme)
+  window.addEventListener('message', (e) => {
+    if (e.data?.type === 'theme-change' && e.data.theme) {
+      applyTheme(e.data.theme as UiTheme)
+    }
+  })
   createRoot(document.getElementById('root')!).render(
     <LocaleProvider initial={lang}>
       <App />

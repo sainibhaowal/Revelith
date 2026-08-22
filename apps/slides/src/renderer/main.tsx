@@ -1,4 +1,4 @@
-﻿import React from 'react'
+import React from 'react'
 import { createRoot } from 'react-dom/client'
 import { htmlLang, type Lang } from '@revelith/i18n'
 import { App } from './App'
@@ -353,11 +353,13 @@ async function bootstrap(): Promise<void> {
     }
   }
   try {
-    // per-promise catch: standalone runs have no app:get-theme handler, and
-    // that rejection must not drop a resolved language
+    const urlParams = new URLSearchParams(window.location.search)
+    const paramTheme = urlParams.get('theme') as UiTheme | null
     ;[lang, theme] = await Promise.all([
       window.slidesApi.getLanguage().catch(() => 'en' as const),
-      window.slidesApi.getTheme().catch(() => 'system' as const),
+      paramTheme
+        ? Promise.resolve(paramTheme)
+        : window.slidesApi.getTheme().catch(() => 'system' as const),
     ])
   } catch {
     /* dev renderer without the preload bridge */
@@ -368,6 +370,11 @@ async function bootstrap(): Promise<void> {
   if (mode !== 'audience') {
     applyTheme(theme)
     window.slidesApi?.onThemeChanged(applyTheme)
+    window.addEventListener('message', (e) => {
+      if (e.data?.type === 'theme-change' && e.data.theme) {
+        applyTheme(e.data.theme as UiTheme)
+      }
+    })
   }
   createRoot(document.getElementById('root')!).render(
     <React.StrictMode>

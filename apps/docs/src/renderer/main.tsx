@@ -245,11 +245,13 @@ async function bootstrap(): Promise<void> {
     } as any
   }
   try {
-    // per-promise catch: standalone runs have no app:get-theme handler, and
-    // that rejection must not drop a resolved language
+    const urlParams = new URLSearchParams(window.location.search)
+    const paramTheme = urlParams.get('theme') as UiTheme | null
     ;[lang, theme] = await Promise.all([
       window.desktop.getLanguage().catch(() => 'en' as const),
-      window.desktop.getTheme().catch(() => 'system' as const),
+      paramTheme
+        ? Promise.resolve(paramTheme)
+        : window.desktop.getTheme().catch(() => 'system' as const),
     ])
   } catch {
     /* dev renderer without the preload bridge */
@@ -258,6 +260,11 @@ async function bootstrap(): Promise<void> {
   document.documentElement.lang = htmlLang(lang)
   applyTheme(theme)
   window.desktop?.onThemeChanged(applyTheme)
+  window.addEventListener('message', (e) => {
+    if (e.data?.type === 'theme-change' && e.data.theme) {
+      applyTheme(e.data.theme as UiTheme)
+    }
+  })
   createRoot(document.getElementById('root')!).render(
     <LocaleProvider initial={lang}>
       <App />

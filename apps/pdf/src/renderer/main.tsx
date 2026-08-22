@@ -51,13 +51,22 @@ void (async () => {
       ipcRenderer: { invoke: async () => {}, on: () => {}, removeListener: () => {} },
     } as any
   }
+  const urlParams = new URLSearchParams(window.location.search)
+  const paramTheme = urlParams.get('theme') as UiTheme | null
   const [lang, theme] = await Promise.all([
     window.pdfApi.getLanguage().catch(() => 'en' as const),
-    window.pdfApi.getTheme().catch(() => 'system' as const),
+    paramTheme
+      ? Promise.resolve(paramTheme)
+      : window.pdfApi.getTheme().catch(() => 'system' as const),
   ])
   document.documentElement.lang = htmlLang(lang as Lang)
   applyTheme(theme)
   window.pdfApi.onThemeChanged(applyTheme)
+  window.addEventListener('message', (e) => {
+    if (e.data?.type === 'theme-change' && e.data.theme) {
+      applyTheme(e.data.theme as UiTheme)
+    }
+  })
   createRoot(document.getElementById('root')!).render(
     <LocaleProvider initial={lang}>
       <App />
