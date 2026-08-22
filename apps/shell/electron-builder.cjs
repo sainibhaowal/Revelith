@@ -339,13 +339,13 @@ const config = {
   nsis: {
     oneClick: false,
     allowToChangeInstallationDirectory: true,
-  },
-  beforePack: async (context) => {
-    assertModuleTreesPresent()
-    if (context.electronPlatformName === 'darwin' && includeMacX64) assertUniversalSidecar()
+    installerIcon: 'build/icon.ico',
+    uninstallerIcon: 'build/icon.ico',
+    installerHeaderIcon: 'build/icon.ico',
   },
   dmg: {
     sign: true,
+    icon: 'build/icon-mac.png',
   },
   afterAllArtifactBuild: 'build/notarize-dmg.js',
 }
