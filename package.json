@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sainibhaowal/Revelith.git"
+    "url": "git+https://github.com/sainibhaowal/ReveLith.git"
   },
   "workspaces": [
     "apps/*",
@@ -63,16 +63,6 @@
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
-      "@semantic-release/changelog",
-      [
-        "@semantic-release/git",
-        {
-          "assets": [
-            "CHANGELOG.md",
-            "package.json"
-          ]
-        }
-      ],
       "@semantic-release/github"
     ]
   }
