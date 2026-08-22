@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.1.4](https://github.com/sainibhaowal/ReveLith/compare/revelith-v1.1.3...revelith-v1.1.4) (2026-08-22)
+
+
+### Bug Fixes
+
+* **ci:** point release asset upload to apps/shell/release output directory ([13be6c5](https://github.com/sainibhaowal/ReveLith/commit/13be6c5c9c1837d40a43680794c3488216d374c1))
+* **pdf:** add DOMMatrix polyfill for jsdom environment in tests ([aafe725](https://github.com/sainibhaowal/ReveLith/commit/aafe7251fde99db82f5247192218fed842d0a984))
+
+
+### Performance Improvements
+
+* **ci:** add rust crate build caching for faster native sidecar builds in CI and release pipelines ([3af84a1](https://github.com/sainibhaowal/ReveLith/commit/3af84a1bfef9724aa8108ae21c486a4f5636746b))
+* **ci:** parallelize test suite across 6 high-speed Ubuntu matrix runners and fix release upload path ([1b0814c](https://github.com/sainibhaowal/ReveLith/commit/1b0814c6636d9c26b0fbf0b2d9610ec1ce1989a1))
+
 ## [1.1.3](https://github.com/sainibhaowal/ReveLith/compare/revelith-v1.1.2...revelith-v1.1.3) (2026-08-22)
 
 
