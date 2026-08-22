@@ -103,6 +103,13 @@ jobs:
         with:
           tag_name: ${{ needs.release-please.outputs.tag_name || github.ref_name }}
           files: |
+            apps/shell/release/*.exe
+            apps/shell/release/*.deb
+            apps/shell/release/*.AppImage
+            apps/shell/release/*.rpm
+            apps/shell/release/*.dmg
+            apps/shell/release/*.zip
+            apps/shell/release/latest*.yml
             apps/shell/dist/*.exe
             apps/shell/dist/*.deb
             apps/shell/dist/*.AppImage
