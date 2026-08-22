@@ -51,6 +51,10 @@ jobs:
           node-version: 22
           cache: npm
       - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+        if: matrix.group == 'Spreadsheet & Calculation'
+        with:
+          workspaces: "apps/sheets/native/xlsx-engine -> apps/sheets/native/xlsx-engine/target"
       - name: Install dependencies
         run: |
           npm ci --include=optional
