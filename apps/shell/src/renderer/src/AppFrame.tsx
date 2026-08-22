@@ -69,7 +69,7 @@ export function AppFrame({ initialOnboardingSeen }: AppFrameProps) {
   }
 
   const currentTheme = document.documentElement.getAttribute('data-theme') || 'system'
-  const iframeSrcWithTheme = `${activeUrl}${activeUrl.includes('?') ? '&' : '?'}theme=${currentTheme}`
+  const iframeSrcWithTheme = `${activeUrl}${activeUrl.includes('?') ? '&' : '?'}mode=tab&theme=${currentTheme}`
 
   return (
     <div className="app-frame" style={{ height: '100vh', display: 'flex', flexDirection: 'column', background: 'var(--surface, #141416)' }}>
