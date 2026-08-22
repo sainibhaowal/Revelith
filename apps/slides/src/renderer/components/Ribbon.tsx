@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Ribbon: tab bar + grouped buttons. Same mechanism as the apps/docs Ribbon
  * (local state switches tabs, .ribbon-body dispatches); content is trimmed to slide capabilities,
  * unimplemented items are grayed placeholders.
@@ -1350,18 +1350,17 @@ export function Ribbon({
       <div
         className={`ribbon-tabs ${IN_TAB ? '' : IS_MAC ? 'ribbon-tabs-mac' : 'ribbon-tabs-win'}`}
       >
-        {!IS_MAC && (
-          <div className="file-tab-wrap">
-            <button
-              className={`ribbon-tab ribbon-tab-file ${fileOpen ? 'open' : ''}`}
-              onMouseDown={(e) => {
-                e.stopPropagation()
-                closeSiblingPanels(e, closePanels, 'file')
-              }}
-              onClick={() => setFileOpen((v) => !v)}
-            >
-              {t('ribbonTabFile')}
-            </button>
+        <div className="file-tab-wrap">
+          <button
+            className={`ribbon-tab ribbon-tab-file ${fileOpen ? 'open' : ''}`}
+            onMouseDown={(e) => {
+              e.stopPropagation()
+              closeSiblingPanels(e, closePanels, 'file')
+            }}
+            onClick={() => setFileOpen((v) => !v)}
+          >
+            {t('ribbonTabFile')}
+          </button>
             {fileOpen && (
               <div className="file-menu">
                 <button

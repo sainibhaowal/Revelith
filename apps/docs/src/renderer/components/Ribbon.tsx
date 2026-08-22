@@ -1450,14 +1450,13 @@ function RibbonInner({
       <div
         className={`ribbon-tabs ${IN_TAB ? '' : IS_MAC ? 'ribbon-tabs-mac' : 'ribbon-tabs-win'}`}
       >
-        {!IS_MAC && (
-          <div className="file-tab-wrap">
-            <button
-              className={`ribbon-tab ribbon-tab-file ${dropdown === 'file' ? 'open' : ''}`}
-              onClick={() => setDropdown((v) => (v === 'file' ? null : 'file'))}
-            >
-              {t('ribbonTabFile')}
-            </button>
+        <div className="file-tab-wrap">
+          <button
+            className={`ribbon-tab ribbon-tab-file ${dropdown === 'file' ? 'open' : ''}`}
+            onClick={() => setDropdown((v) => (v === 'file' ? null : 'file'))}
+          >
+            {t('ribbonTabFile')}
+          </button>
             {dropdown === 'file' && (
               <div className="file-menu">
                 <button
