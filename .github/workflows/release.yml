@@ -72,6 +72,9 @@ jobs:
           if [ "${{ matrix.platform }}" = "win" ]; then
             rustup target add x86_64-pc-windows-gnu || true
             cargo build --release --target x86_64-pc-windows-gnu --manifest-path apps/sheets/native/xlsx-engine/Cargo.toml || cargo build --release --manifest-path apps/sheets/native/xlsx-engine/Cargo.toml
+          elif [ "${{ matrix.platform }}" = "mac" ]; then
+            rustup target add x86_64-apple-darwin aarch64-apple-darwin
+            npm run native:build:universal -w @revelith/sheets
           else
             npm run native:build -w @revelith/sheets
           fi
