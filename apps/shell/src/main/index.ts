@@ -330,16 +330,16 @@ const tMain = createI18n({
     menuHelp: '帮助',
     thirdPartyNotices: '第三方软件声明',
     menuExportDocx: '导出为 Word…',
-    pdfDocxLoginMsg: '导出为 Word 需要登录 Genspark 账号。',
+    pdfDocxLoginMsg: '导出为 Word 需要登录 ReveLith AI 账号。',
     pdfDocxLoginDetail: '点击“登录”将打开浏览器完成授权，完成后请重新点击导出。',
     pdfDocxBtnLogin: '登录',
-    pdfDocxConfirmMsg: '将此 PDF 上传到 Genspark 云端转换为 Word？',
+    pdfDocxConfirmMsg: '将此 PDF 上传到 ReveLith AI 云端转换为 Word？',
     pdfDocxConfirmDetail: '本次转换将消耗 5 credits，文件将上传至云端处理。',
     pdfDocxConfirmBalance: '当前余额 {balance} credits。',
     pdfDocxBtnConvert: '继续',
     btnCancel: '取消',
     pdfDocxFailedMsg: '导出为 Word 失败',
-    pdfDocxNoCliMsg: '无法登录 Genspark：缺少必需组件（gsk），请重新安装应用。',
+    pdfDocxNoCliMsg: '无法登录 ReveLith AI：缺少必需组件（gsk），请重新安装应用。',
     pdfDocxBusyMsg: '正在转换中，请等待当前导出完成。',
     dlgPickSaveDir: '选择默认保存位置',
     errSaveDirUnusable: '所选文件夹不可写，无法用作默认保存位置',
@@ -383,11 +383,11 @@ const tMain = createI18n({
     menuHelp: 'Help',
     thirdPartyNotices: 'Third-Party Notices',
     menuExportDocx: 'Export as Word…',
-    pdfDocxLoginMsg: 'Exporting as Word requires signing in to Genspark.',
+    pdfDocxLoginMsg: 'Exporting as Word requires signing in to ReveLith AI.',
     pdfDocxLoginDetail:
       'Clicking “Sign In” opens your browser to authorize; once done, click Export again.',
     pdfDocxBtnLogin: 'Sign In',
-    pdfDocxConfirmMsg: 'Upload this PDF to Genspark cloud and convert it to Word?',
+    pdfDocxConfirmMsg: 'Upload this PDF to ReveLith AI cloud and convert it to Word?',
     pdfDocxConfirmDetail:
       'The conversion costs 5 credits. The file will be uploaded for cloud processing.',
     pdfDocxConfirmBalance: 'Current balance: {balance} credits.',
@@ -395,7 +395,7 @@ const tMain = createI18n({
     btnCancel: 'Cancel',
     pdfDocxFailedMsg: 'Export as Word failed',
     pdfDocxNoCliMsg:
-      'Cannot sign in to Genspark: a required component (gsk) is missing. Please reinstall the app.',
+      'Cannot sign in to ReveLith AI: a required component (gsk) is missing. Please reinstall the app.',
     pdfDocxBusyMsg: 'A Word export is already in progress. Please wait for it to finish.',
     dlgPickSaveDir: 'Choose Default Save Location',
     errSaveDirUnusable:
@@ -440,11 +440,11 @@ const tMain = createI18n({
     menuHelp: 'ヘルプ',
     thirdPartyNotices: 'サードパーティソフトウェアに関する通知',
     menuExportDocx: 'Word として書き出す…',
-    pdfDocxLoginMsg: 'Word への書き出しには Genspark へのログインが必要です。',
+    pdfDocxLoginMsg: 'Word への書き出しには ReveLith AI へのログインが必要です。',
     pdfDocxLoginDetail:
       '「ログイン」をクリックするとブラウザで認証します。完了後、もう一度書き出しを実行してください。',
     pdfDocxBtnLogin: 'ログイン',
-    pdfDocxConfirmMsg: 'この PDF を Genspark クラウドにアップロードして Word に変換しますか？',
+    pdfDocxConfirmMsg: 'この PDF を ReveLith AI クラウドにアップロードして Word に変換しますか？',
     pdfDocxConfirmDetail:
       '変換には 5 クレジットを消費します。ファイルはクラウドにアップロードされ処理されます。',
     pdfDocxConfirmBalance: '現在の残高：{balance} クレジット。',
@@ -452,7 +452,7 @@ const tMain = createI18n({
     btnCancel: 'キャンセル',
     pdfDocxFailedMsg: 'Word への書き出しに失敗しました',
     pdfDocxNoCliMsg:
-      'Genspark にサインインできません：必要なコンポーネント（gsk）が見つかりません。アプリを再インストールしてください。',
+      'ReveLith AI にサインインできません：必要なコンポーネント（gsk）が見つかりません。アプリを再インストールしてください。',
     pdfDocxBusyMsg: 'Word への書き出しが進行中です。完了までお待ちください。',
     dlgPickSaveDir: '既定の保存先を選択',
     errSaveDirUnusable:
@@ -497,11 +497,11 @@ const tMain = createI18n({
     menuHelp: '도움말',
     thirdPartyNotices: '타사 소프트웨어 고지',
     menuExportDocx: 'Word로 내보내기…',
-    pdfDocxLoginMsg: 'Word로 내보내려면 Genspark 로그인이 필요합니다.',
+    pdfDocxLoginMsg: 'Word로 내보내려면 ReveLith AI 로그인이 필요합니다.',
     pdfDocxLoginDetail:
       '“로그인”을 클릭하면 브라우저에서 인증합니다. 완료 후 내보내기를 다시 클릭하세요.',
     pdfDocxBtnLogin: '로그인',
-    pdfDocxConfirmMsg: '이 PDF를 Genspark 클라우드에 업로드하여 Word로 변환할까요?',
+    pdfDocxConfirmMsg: '이 PDF를 ReveLith AI 클라우드에 업로드하여 Word로 변환할까요?',
     pdfDocxConfirmDetail:
       '변환에는 5 크레딧이 소모됩니다. 파일은 클라우드로 업로드되어 처리됩니다.',
     pdfDocxConfirmBalance: '현재 잔액: {balance} 크레딧.',
@@ -509,7 +509,7 @@ const tMain = createI18n({
     btnCancel: '취소',
     pdfDocxFailedMsg: 'Word로 내보내기 실패',
     pdfDocxNoCliMsg:
-      'Genspark에 로그인할 수 없습니다. 필수 구성 요소(gsk)가 없습니다. 앱을 다시 설치해 주세요.',
+      'ReveLith AI에 로그인할 수 없습니다. 필수 구성 요소(gsk)가 없습니다. 앱을 다시 설치해 주세요.',
     pdfDocxBusyMsg: 'Word 내보내기가 이미 진행 중입니다. 완료될 때까지 기다려 주세요.',
     dlgPickSaveDir: '기본 저장 위치 선택',
     errSaveDirUnusable: '선택한 폴더에 쓸 수 없어 기본 저장 위치로 사용할 수 없습니다',
@@ -553,11 +553,11 @@ const tMain = createI18n({
     menuHelp: 'Aide',
     thirdPartyNotices: 'Mentions relatives aux logiciels tiers',
     menuExportDocx: 'Exporter en Word…',
-    pdfDocxLoginMsg: "L'export en Word nécessite une connexion à Genspark.",
+    pdfDocxLoginMsg: "L'export en Word nécessite une connexion à ReveLith AI.",
     pdfDocxLoginDetail:
       "Cliquez sur « Se connecter » pour autoriser dans le navigateur, puis relancez l'export.",
     pdfDocxBtnLogin: 'Se connecter',
-    pdfDocxConfirmMsg: 'Téléverser ce PDF vers le cloud Genspark pour le convertir en Word ?',
+    pdfDocxConfirmMsg: 'Téléverser ce PDF vers le cloud ReveLith AI pour le convertir en Word ?',
     pdfDocxConfirmDetail:
       'La conversion coûte 5 crédits. Le fichier sera téléversé pour traitement dans le cloud.',
     pdfDocxConfirmBalance: 'Solde actuel : {balance} crédits.',
@@ -565,7 +565,7 @@ const tMain = createI18n({
     btnCancel: 'Annuler',
     pdfDocxFailedMsg: "Échec de l'export en Word",
     pdfDocxNoCliMsg:
-      "Connexion à Genspark impossible : un composant requis (gsk) est manquant. Veuillez réinstaller l'application.",
+      "Connexion à ReveLith AI impossible : un composant requis (gsk) est manquant. Veuillez réinstaller l'application.",
     pdfDocxBusyMsg: "Un export en Word est déjà en cours. Veuillez attendre qu'il se termine.",
     dlgPickSaveDir: "Choisir l'emplacement d'enregistrement par défaut",
     errSaveDirUnusable:
@@ -610,11 +610,11 @@ const tMain = createI18n({
     menuHelp: 'Hilfe',
     thirdPartyNotices: 'Hinweise zu Drittanbietersoftware',
     menuExportDocx: 'Als Word exportieren…',
-    pdfDocxLoginMsg: 'Für den Word-Export ist eine Anmeldung bei Genspark erforderlich.',
+    pdfDocxLoginMsg: 'Für den Word-Export ist eine Anmeldung bei ReveLith AI erforderlich.',
     pdfDocxLoginDetail:
       'Klicken Sie auf „Anmelden“, um die Autorisierung im Browser abzuschließen, und starten Sie den Export danach erneut.',
     pdfDocxBtnLogin: 'Anmelden',
-    pdfDocxConfirmMsg: 'Dieses PDF in die Genspark-Cloud hochladen und in Word konvertieren?',
+    pdfDocxConfirmMsg: 'Dieses PDF in die ReveLith AI Cloud hochladen und in Word konvertieren?',
     pdfDocxConfirmDetail:
       'Die Konvertierung kostet 5 Credits. Die Datei wird zur Verarbeitung in die Cloud hochgeladen.',
     pdfDocxConfirmBalance: 'Aktuelles Guthaben: {balance} Credits.',
@@ -622,7 +622,7 @@ const tMain = createI18n({
     btnCancel: 'Abbrechen',
     pdfDocxFailedMsg: 'Word-Export fehlgeschlagen',
     pdfDocxNoCliMsg:
-      'Anmeldung bei Genspark nicht möglich: Eine erforderliche Komponente (gsk) fehlt. Bitte installieren Sie die App neu.',
+      'Anmeldung bei ReveLith AI nicht möglich: Eine erforderliche Komponente (gsk) fehlt. Bitte installieren Sie die App neu.',
     pdfDocxBusyMsg: 'Ein Word-Export läuft bereits. Bitte warten Sie, bis er abgeschlossen ist.',
     dlgPickSaveDir: 'Standard-Speicherort auswählen',
     errSaveDirUnusable:
@@ -667,11 +667,11 @@ const tMain = createI18n({
     menuHelp: 'Ayuda',
     thirdPartyNotices: 'Avisos de software de terceros',
     menuExportDocx: 'Exportar como Word…',
-    pdfDocxLoginMsg: 'Para exportar como Word es necesario iniciar sesión en Genspark.',
+    pdfDocxLoginMsg: 'Para exportar como Word es necesario iniciar sesión en ReveLith AI.',
     pdfDocxLoginDetail:
       'Al hacer clic en «Iniciar sesión» se abrirá el navegador para autorizar; después, vuelve a hacer clic en Exportar.',
     pdfDocxBtnLogin: 'Iniciar sesión',
-    pdfDocxConfirmMsg: '¿Subir este PDF a la nube de Genspark para convertirlo a Word?',
+    pdfDocxConfirmMsg: '¿Subir este PDF a la nube de ReveLith AI para convertirlo a Word?',
     pdfDocxConfirmDetail:
       'La conversión cuesta 5 créditos. El archivo se subirá para procesarse en la nube.',
     pdfDocxConfirmBalance: 'Saldo actual: {balance} créditos.',
@@ -724,18 +724,18 @@ const tMain = createI18n({
     menuHelp: 'วิธีใช้',
     thirdPartyNotices: 'ประกาศเกี่ยวกับซอฟต์แวร์ของบุคคลที่สาม',
     menuExportDocx: 'ส่งออกเป็น Word…',
-    pdfDocxLoginMsg: 'การส่งออกเป็น Word ต้องเข้าสู่ระบบ Genspark',
+    pdfDocxLoginMsg: 'การส่งออกเป็น Word ต้องเข้าสู่ระบบ ReveLith AI',
     pdfDocxLoginDetail:
       'คลิก “เข้าสู่ระบบ” เพื่อเปิดเบราว์เซอร์ยืนยันตัวตน เสร็จแล้วให้คลิกส่งออกอีกครั้ง',
     pdfDocxBtnLogin: 'เข้าสู่ระบบ',
-    pdfDocxConfirmMsg: 'อัปโหลด PDF นี้ไปยังคลาวด์ Genspark เพื่อแปลงเป็น Word หรือไม่?',
+    pdfDocxConfirmMsg: 'อัปโหลด PDF นี้ไปยังคลาวด์ ReveLith AI เพื่อแปลงเป็น Word หรือไม่?',
     pdfDocxConfirmDetail: 'การแปลงใช้ 5 เครดิต ไฟล์จะถูกอัปโหลดเพื่อประมวลผลบนคลาวด์',
     pdfDocxConfirmBalance: 'ยอดคงเหลือปัจจุบัน: {balance} เครดิต',
     pdfDocxBtnConvert: 'ดำเนินการต่อ',
     btnCancel: 'ยกเลิก',
     pdfDocxFailedMsg: 'ส่งออกเป็น Word ไม่สำเร็จ',
     pdfDocxNoCliMsg:
-      'ไม่สามารถลงชื่อเข้าใช้ Genspark ได้: ไม่พบคอมโพเนนต์ที่จำเป็น (gsk) โปรดติดตั้งแอปใหม่',
+      'ไม่สามารถลงชื่อเข้าใช้ ReveLith AI ได้: ไม่พบคอมโพเนนต์ที่จำเป็น (gsk) โปรดติดตั้งแอปใหม่',
     pdfDocxBusyMsg: 'กำลังส่งออกเป็น Word อยู่ โปรดรอให้เสร็จสิ้นก่อน',
     dlgPickSaveDir: 'เลือกตำแหน่งบันทึกเริ่มต้น',
     errSaveDirUnusable: 'โฟลเดอร์ที่เลือกไม่สามารถเขียนได้ จึงใช้เป็นตำแหน่งบันทึกเริ่มต้นไม่ได้',
@@ -779,11 +779,11 @@ const tMain = createI18n({
     menuHelp: 'Bantuan',
     thirdPartyNotices: 'Pemberitahuan Perangkat Lunak Pihak Ketiga',
     menuExportDocx: 'Ekspor sebagai Word…',
-    pdfDocxLoginMsg: 'Ekspor sebagai Word memerlukan login ke Genspark.',
+    pdfDocxLoginMsg: 'Ekspor sebagai Word memerlukan login ke ReveLith AI.',
     pdfDocxLoginDetail:
       'Klik “Masuk” untuk membuka browser dan memberi otorisasi; setelah selesai, klik Ekspor lagi.',
     pdfDocxBtnLogin: 'Masuk',
-    pdfDocxConfirmMsg: 'Unggah PDF ini ke cloud Genspark untuk dikonversi ke Word?',
+    pdfDocxConfirmMsg: 'Unggah PDF ini ke cloud ReveLith AI untuk dikonversi ke Word?',
     pdfDocxConfirmDetail:
       'Konversi ini menggunakan 5 kredit. File akan diunggah untuk diproses di cloud.',
     pdfDocxConfirmBalance: 'Saldo saat ini: {balance} kredit.',
@@ -791,7 +791,7 @@ const tMain = createI18n({
     btnCancel: 'Batal',
     pdfDocxFailedMsg: 'Gagal mengekspor sebagai Word',
     pdfDocxNoCliMsg:
-      'Tidak dapat masuk ke Genspark: komponen yang diperlukan (gsk) tidak ditemukan. Silakan instal ulang aplikasi.',
+      'Tidak dapat masuk ke ReveLith AI: komponen yang diperlukan (gsk) tidak ditemukan. Silakan instal ulang aplikasi.',
     pdfDocxBusyMsg: 'Ekspor ke Word sedang berlangsung. Harap tunggu hingga selesai.',
     dlgPickSaveDir: 'Pilih Lokasi Penyimpanan Default',
     errSaveDirUnusable:
@@ -836,11 +836,11 @@ const tMain = createI18n({
     menuHelp: 'Справка',
     thirdPartyNotices: 'Уведомления о стороннем ПО',
     menuExportDocx: 'Экспортировать в Word…',
-    pdfDocxLoginMsg: 'Для экспорта в Word требуется вход в Genspark.',
+    pdfDocxLoginMsg: 'Для экспорта в Word требуется вход в ReveLith AI.',
     pdfDocxLoginDetail:
       'Нажмите «Войти», чтобы авторизоваться в браузере, затем снова запустите экспорт.',
     pdfDocxBtnLogin: 'Войти',
-    pdfDocxConfirmMsg: 'Загрузить этот PDF в облако Genspark и конвертировать в Word?',
+    pdfDocxConfirmMsg: 'Загрузить этот PDF в облако ReveLith AI и конвертировать в Word?',
     pdfDocxConfirmDetail:
       'Конвертация стоит 5 кредитов. Файл будет загружен для обработки в облаке.',
     pdfDocxConfirmBalance: 'Текущий баланс: {balance} кредитов.',
@@ -848,7 +848,7 @@ const tMain = createI18n({
     btnCancel: 'Отмена',
     pdfDocxFailedMsg: 'Не удалось экспортировать в Word',
     pdfDocxNoCliMsg:
-      'Не удаётся войти в Genspark: отсутствует необходимый компонент (gsk). Переустановите приложение.',
+      'Не удаётся войти в ReveLith AI: отсутствует необходимый компонент (gsk). Переустановите приложение.',
     pdfDocxBusyMsg: 'Экспорт в Word уже выполняется. Дождитесь его завершения.',
     dlgPickSaveDir: 'Выбрать папку сохранения по умолчанию',
     errSaveDirUnusable:
@@ -893,18 +893,18 @@ const tMain = createI18n({
     menuHelp: 'تعليمات',
     thirdPartyNotices: 'إشعارات برامج الجهات الخارجية',
     menuExportDocx: 'تصدير كملف Word…',
-    pdfDocxLoginMsg: 'يتطلب التصدير كملف Word تسجيل الدخول إلى Genspark.',
+    pdfDocxLoginMsg: 'يتطلب التصدير كملف Word تسجيل الدخول إلى ReveLith AI.',
     pdfDocxLoginDetail:
       'انقر على «تسجيل الدخول» لفتح المتصفح وإتمام التفويض، ثم انقر على التصدير مرة أخرى.',
     pdfDocxBtnLogin: 'تسجيل الدخول',
-    pdfDocxConfirmMsg: 'رفع هذا الـ PDF إلى سحابة Genspark وتحويله إلى Word؟',
+    pdfDocxConfirmMsg: 'رفع هذا الـ PDF إلى سحابة ReveLith AI وتحويله إلى Word؟',
     pdfDocxConfirmDetail: 'يكلف التحويل 5 أرصدة. سيتم رفع الملف للمعالجة في السحابة.',
     pdfDocxConfirmBalance: 'الرصيد الحالي: {balance} من الأرصدة.',
     pdfDocxBtnConvert: 'متابعة',
     btnCancel: 'إلغاء',
     pdfDocxFailedMsg: 'فشل التصدير كملف Word',
     pdfDocxNoCliMsg:
-      'تعذّر تسجيل الدخول إلى Genspark: المكوّن المطلوب (gsk) مفقود. يُرجى إعادة تثبيت التطبيق.',
+      'تعذّر تسجيل الدخول إلى ReveLith AI: المكوّن المطلوب (gsk) مفقود. يُرجى إعادة تثبيت التطبيق.',
     pdfDocxBusyMsg: 'يجري حاليًا تصدير إلى Word. يُرجى الانتظار حتى يكتمل.',
     dlgPickSaveDir: 'اختيار موقع الحفظ الافتراضي',
     errSaveDirUnusable: 'المجلد المحدد غير قابل للكتابة ولا يمكن استخدامه كموقع حفظ افتراضي',
@@ -948,11 +948,11 @@ const tMain = createI18n({
     menuHelp: 'Ajuda',
     thirdPartyNotices: 'Avisos de software de terceiros',
     menuExportDocx: 'Exportar como Word…',
-    pdfDocxLoginMsg: 'Exportar como Word requer login no Genspark.',
+    pdfDocxLoginMsg: 'Exportar como Word requer login no ReveLith AI.',
     pdfDocxLoginDetail:
       'Clique em “Entrar” para autorizar no navegador; depois, clique em Exportar novamente.',
     pdfDocxBtnLogin: 'Entrar',
-    pdfDocxConfirmMsg: 'Enviar este PDF para a nuvem do Genspark e convertê-lo em Word?',
+    pdfDocxConfirmMsg: 'Enviar este PDF para a nuvem do ReveLith AI e convertê-lo em Word?',
     pdfDocxConfirmDetail:
       'A conversão custa 5 créditos. O arquivo será enviado para processamento na nuvem.',
     pdfDocxConfirmBalance: 'Saldo atual: {balance} créditos.',
@@ -960,7 +960,7 @@ const tMain = createI18n({
     btnCancel: 'Cancelar',
     pdfDocxFailedMsg: 'Falha ao exportar como Word',
     pdfDocxNoCliMsg:
-      'Não é possível iniciar sessão no Genspark: falta um componente necessário (gsk). Reinstale o aplicativo.',
+      'Não é possível iniciar sessão no ReveLith AI: falta um componente necessário (gsk). Reinstale o aplicativo.',
     pdfDocxBusyMsg: 'Já há uma exportação para Word em andamento. Aguarde a conclusão.',
     dlgPickSaveDir: 'Escolher local de salvamento padrão',
     errSaveDirUnusable:
@@ -1005,11 +1005,11 @@ const tMain = createI18n({
     menuHelp: 'Aiuto',
     thirdPartyNotices: 'Note sul software di terze parti',
     menuExportDocx: 'Esporta come Word…',
-    pdfDocxLoginMsg: 'Per esportare come Word è necessario accedere a Genspark.',
+    pdfDocxLoginMsg: 'Per esportare come Word è necessario accedere a ReveLith AI.',
     pdfDocxLoginDetail:
       'Fai clic su “Accedi” per autorizzare nel browser; al termine, fai di nuovo clic su Esporta.',
     pdfDocxBtnLogin: 'Accedi',
-    pdfDocxConfirmMsg: 'Caricare questo PDF sul cloud Genspark e convertirlo in Word?',
+    pdfDocxConfirmMsg: 'Caricare questo PDF sul cloud ReveLith AI e convertirlo in Word?',
     pdfDocxConfirmDetail:
       "La conversione costa 5 crediti. Il file verrà caricato per l'elaborazione nel cloud.",
     pdfDocxConfirmBalance: 'Saldo attuale: {balance} crediti.',
@@ -1017,7 +1017,7 @@ const tMain = createI18n({
     btnCancel: 'Annulla',
     pdfDocxFailedMsg: 'Esportazione in Word non riuscita',
     pdfDocxNoCliMsg:
-      "Impossibile accedere a Genspark: manca un componente necessario (gsk). Reinstallare l'app.",
+      "Impossibile accedere a ReveLith AI: manca un componente necessario (gsk). Reinstallare l'app.",
     pdfDocxBusyMsg: "Un'esportazione in Word è già in corso. Attendi il completamento.",
     dlgPickSaveDir: 'Scegli la posizione di salvataggio predefinita',
     errSaveDirUnusable:
@@ -1062,11 +1062,11 @@ const tMain = createI18n({
     menuHelp: 'Pomoc',
     thirdPartyNotices: 'Informacje o oprogramowaniu innych firm',
     menuExportDocx: 'Eksportuj jako Word…',
-    pdfDocxLoginMsg: 'Eksport do formatu Word wymaga zalogowania do Genspark.',
+    pdfDocxLoginMsg: 'Eksport do formatu Word wymaga zalogowania do ReveLith AI.',
     pdfDocxLoginDetail:
       'Kliknij „Zaloguj się”, aby autoryzować w przeglądarce; po zakończeniu kliknij Eksportuj ponownie.',
     pdfDocxBtnLogin: 'Zaloguj się',
-    pdfDocxConfirmMsg: 'Przesłać ten PDF do chmury Genspark i przekonwertować na Word?',
+    pdfDocxConfirmMsg: 'Przesłać ten PDF do chmury ReveLith AI i przekonwertować na Word?',
     pdfDocxConfirmDetail:
       'Konwersja kosztuje 5 kredytów. Plik zostanie przesłany do przetworzenia w chmurze.',
     pdfDocxConfirmBalance: 'Aktualne saldo: {balance} kredytów.',
@@ -1074,7 +1074,7 @@ const tMain = createI18n({
     btnCancel: 'Anuluj',
     pdfDocxFailedMsg: 'Eksport do formatu Word nie powiódł się',
     pdfDocxNoCliMsg:
-      'Nie można zalogować się do Genspark: brakuje wymaganego komponentu (gsk). Zainstaluj aplikację ponownie.',
+      'Nie można zalogować się do ReveLith AI: brakuje wymaganego komponentu (gsk). Zainstaluj aplikację ponownie.',
     pdfDocxBusyMsg: 'Eksport do formatu Word już trwa. Poczekaj na jego zakończenie.',
     dlgPickSaveDir: 'Wybierz domyślną lokalizację zapisu',
     errSaveDirUnusable:
@@ -1176,7 +1176,7 @@ const tMain = createI18n({
     menuHelp: 'Bantuan',
     thirdPartyNotices: 'Notis Perisian Pihak Ketiga',
     menuExportDocx: 'Eksport sebagai Word…',
-    pdfDocxLoginMsg: 'Eksport sebagai Word memerlukan log masuk ke Genspark.',
+    pdfDocxLoginMsg: 'Eksport sebagai Word memerlukan log masuk ke ReveLith AI.',
     pdfDocxLoginDetail:
       'Klik “Log Masuk” untuk membuka pelayar dan memberi kebenaran; selepas selesai, klik Eksport sekali lagi.',
     pdfDocxBtnLogin: 'Log Masuk',
@@ -1188,7 +1188,7 @@ const tMain = createI18n({
     btnCancel: 'Batal',
     pdfDocxFailedMsg: 'Gagal mengeksport sebagai Word',
     pdfDocxNoCliMsg:
-      'Tidak dapat log masuk ke Genspark: komponen yang diperlukan (gsk) tiada. Sila pasang semula aplikasi.',
+      'Tidak dapat log masuk ke ReveLith AI: komponen yang diperlukan (gsk) tiada. Sila pasang semula aplikasi.',
     pdfDocxBusyMsg: 'Eksport ke Word sedang dijalankan. Sila tunggu sehingga selesai.',
     dlgPickSaveDir: 'Pilih Lokasi Simpanan Lalai',
     errSaveDirUnusable:
@@ -1353,7 +1353,7 @@ const tMain = createI18n({
     pdfDocxBtnConvert: '繼續',
     btnCancel: '取消',
     pdfDocxFailedMsg: '匯出為 Word 失敗',
-    pdfDocxNoCliMsg: '無法登入 Genspark：缺少必要元件（gsk），請重新安裝應用程式。',
+    pdfDocxNoCliMsg: '無法登入 ReveLith AI：缺少必要元件（gsk），請重新安裝應用程式。',
     pdfDocxBusyMsg: '正在轉換中，請等待目前的匯出完成。',
     dlgPickSaveDir: '選擇預設儲存位置',
     errSaveDirUnusable: '所選資料夾無法寫入，無法作為預設儲存位置',
