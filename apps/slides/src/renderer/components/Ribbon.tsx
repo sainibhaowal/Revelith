@@ -1419,7 +1419,6 @@ export function Ribbon({
               </div>
             )}
           </div>
-        )}
         <button
           className="qa-btn"
           data-tip={t('ribbonSaveTip')}

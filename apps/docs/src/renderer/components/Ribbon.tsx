@@ -1488,7 +1488,6 @@ function RibbonInner({
               </div>
             )}
           </div>
-        )}
         {quickActions}
         {TABS.filter((tabName) => tabName !== 'file').map((tabName) => (
           <button
