@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.3](https://github.com/sainibhaowal/ReveLith/compare/revelith-v1.1.2...revelith-v1.1.3) (2026-08-22)
+
+
+### Bug Fixes
+
+* **ci:** add macOS universal rust targets x86_64-apple-darwin and aar… ([69e3945](https://github.com/sainibhaowal/ReveLith/commit/69e394564a38f8a7c1376e878f68a0da7ec2d7ad))
+* **ci:** add macOS universal rust targets x86_64-apple-darwin and aarch64-apple-darwin ([4d90d34](https://github.com/sainibhaowal/ReveLith/commit/4d90d345d2c8906c152d9b08a628e64b6e4340e7))
+
 ## [1.1.2](https://github.com/sainibhaowal/ReveLith/compare/revelith-v1.1.1...revelith-v1.1.2) (2026-08-22)
 
 
