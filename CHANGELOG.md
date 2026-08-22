@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.2](https://github.com/sainibhaowal/ReveLith/compare/revelith-v1.1.1...revelith-v1.1.2) (2026-08-22)
+
+
+### Bug Fixes
+
+* **ci:** install platform-specific native rollup binary for macOS and Linux runners ([049d4c6](https://github.com/sainibhaowal/ReveLith/commit/049d4c676d54d858f6dba4632b191b44918d518c))
+* **ci:** install platform-specific native rollup binary for macOS and… ([4b27243](https://github.com/sainibhaowal/ReveLith/commit/4b2724325d9b6a39f965fe8fc1b5c118bc80135c))
+
 ## [1.1.1](https://github.com/sainibhaowal/ReveLith/compare/revelith-v1.1.0...revelith-v1.1.1) (2026-08-21)
 
 
