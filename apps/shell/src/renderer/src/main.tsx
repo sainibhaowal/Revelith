@@ -92,7 +92,6 @@ if (!window.aiOffice) {
       localStorage.setItem('revelith.aiSettings', JSON.stringify(settings))
     },
     setOnboardingSeen: async () => {},
-    setTheme: async () => {},
     getDefaultSaveDir: async () => '',
     pickDefaultSaveDir: async () => null,
     openCommunity: async () => {},
