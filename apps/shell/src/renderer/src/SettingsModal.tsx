@@ -928,38 +928,9 @@ export function SettingsModal({
             {section === 'about' && (
               <>
                 <h3 className="set-pane-title">{t('setSecAbout')}</h3>
-                <Field label={t('versionLabel')} value={appVersion || ':'} />
-                <div className="set-field">
-                  <div className="set-field-text">
-                    <label className="set-field-label" htmlFor="set-channel">
-                      {t('updateChannel')}
-                    </label>
-                  </div>
-                  <span className="set-select-wrap">
-                    <span className="set-select-text" aria-hidden="true">
-                      {t(
-                        CHANNEL_OPTIONS.find((o) => o.value === channel)?.labelKey ??
-                          'channelStable',
-                      )}
-                    </span>
-                    <select
-                      id="set-channel"
-                      className="set-select"
-                      value={channel}
-                      onChange={(e) => {
-                        const next = e.target.value === 'beta' ? 'beta' : 'stable'
-                        setChannel(next)
-                        void window.aiOffice.setUpdateChannel(next)
-                      }}
-                    >
-                      {CHANNEL_OPTIONS.map((opt) => (
-                        <option key={opt.value} value={opt.value}>
-                          {t(opt.labelKey)}
-                        </option>
-                      ))}
-                    </select>
-                  </span>
-                </div>
+                <Field label={t('versionLabel')} value={appVersion || '1.1.4'} />
+                <Field label="Edition" value="ReveLith AI Desktop" />
+                <Field label="License" value="Apache-2.0 Open Source" />
               </>
             )}
           </div>

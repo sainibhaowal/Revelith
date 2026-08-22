@@ -68,6 +68,9 @@ export function AppFrame({ initialOnboardingSeen }: AppFrameProps) {
     markdown: 'AI Markdown',
   }
 
+  const currentTheme = document.documentElement.getAttribute('data-theme') || 'system'
+  const iframeSrcWithTheme = `${activeUrl}${activeUrl.includes('?') ? '&' : '?'}theme=${currentTheme}`
+
   return (
     <div className="app-frame" style={{ height: '100vh', display: 'flex', flexDirection: 'column', background: 'var(--surface, #141416)' }}>
       <TabBar />
@@ -130,9 +133,17 @@ export function AppFrame({ initialOnboardingSeen }: AppFrameProps) {
               </div>
             )}
             <iframe
-              src={activeUrl}
+              id="subapp-frame"
+              src={iframeSrcWithTheme}
               title={activeTabTitle}
-              onLoad={() => setIframeLoading(false)}
+              onLoad={(e) => {
+                setIframeLoading(false)
+                try {
+                  const targetTheme = document.documentElement.getAttribute('data-theme') || 'system'
+                  const frame = e.currentTarget
+                  frame.contentWindow?.postMessage({ type: 'theme-change', theme: targetTheme }, '*')
+                } catch {}
+              }}
               style={{
                 position: 'absolute',
                 inset: 0,

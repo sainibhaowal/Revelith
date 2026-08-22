@@ -63,7 +63,7 @@ if (!window.aiOffice) {
     onAccountLogin: () => () => {},
     openLoginUrl: async () => {},
     accountLogout: async () => {},
-    getAppVersion: async () => '0.6.0',
+    getAppVersion: async () => '1.1.4',
     getAiSettings: async () => {
       const stored = localStorage.getItem('revelith.aiSettings')
       if (stored) {

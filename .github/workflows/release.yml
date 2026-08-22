@@ -78,6 +78,15 @@ jobs:
           npm install --no-save @rollup/rollup-${{ runner.os == 'macOS' && 'darwin-arm64' || runner.os == 'Linux' && 'linux-x64-gnu' || 'win32-x64-msvc' }} || true
         shell: bash
 
+      - name: Sync Semantic Release Version
+        if: needs.semantic-release.outputs.new_release_version != ''
+        run: |
+          VERSION="${{ needs.semantic-release.outputs.new_release_version }}"
+          echo "Setting release version to: $VERSION"
+          npm version "$VERSION" --no-git-tag-version --allow-same-version
+          npm version "$VERSION" --no-git-tag-version --allow-same-version -w @revelith/shell
+        shell: bash
+
       - name: Run Workspace Typecheck
         run: npm run typecheck
 
