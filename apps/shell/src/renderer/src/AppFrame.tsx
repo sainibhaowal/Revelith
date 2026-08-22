@@ -23,6 +23,7 @@ export function AppFrame({ initialOnboardingSeen }: AppFrameProps) {
   const [activeTabTitle, setActiveTabTitle] = useState<string>('Home')
   const [showOnboarding, setShowOnboarding] = useState(!initialOnboardingSeen)
   const [showSettingsModal, setShowSettingsModal] = useState(false)
+  const [iframeLoading, setIframeLoading] = useState(true)
 
   useEffect(() => {
     const applyTabs = (tabs: Awaited<ReturnType<typeof window.aiOfficeTabs.list>>) => {
@@ -31,6 +32,7 @@ export function AppFrame({ initialOnboardingSeen }: AppFrameProps) {
       setActiveTabKind(kind)
       setActiveTabTitle(active?.title || 'Editor')
       setHomeActive(!active || kind === 'home')
+      setIframeLoading(true)
     }
     void window.aiOfficeTabs.list().then(applyTabs)
     return window.aiOfficeTabs.onChanged(applyTabs)
@@ -56,22 +58,93 @@ export function AppFrame({ initialOnboardingSeen }: AppFrameProps) {
     void window.aiOffice?.setOnboardingSeen?.().catch(() => {})
   }
 
-  const isBrowserMode = !(window as any).electron
   const activeUrl = RENDERER_URLS[activeTabKind] || 'http://localhost:5173'
 
+  const KIND_TITLES: Record<string, string> = {
+    docs: 'AI Docs',
+    sheets: 'AI Sheets',
+    slides: 'AI Slides',
+    pdf: 'AI PDF',
+    markdown: 'AI Markdown',
+  }
+
   return (
-    <div className="app-frame" style={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
+    <div className="app-frame" style={{ height: '100vh', display: 'flex', flexDirection: 'column', background: 'var(--surface, #141416)' }}>
       <TabBar />
-      <div className="app-frame-content" style={{ flex: 1, position: 'relative', overflow: 'hidden' }}>
+      <div className="app-frame-content" style={{ flex: 1, position: 'relative', overflow: 'hidden', background: 'var(--surface, #141416)' }}>
         <div style={{ width: '100%', height: '100%', display: homeActive ? 'block' : 'none' }}>
           <Home />
         </div>
-        {isBrowserMode && !homeActive && (
-          <iframe
-            src={activeUrl}
-            title={activeTabTitle}
-            style={{ width: '100%', height: '100%', border: 'none', background: '#1e1e1e' }}
-          />
+        {!homeActive && (
+          <>
+            {iframeLoading && (
+              <div
+                style={{
+                  position: 'absolute',
+                  inset: 0,
+                  zIndex: 2,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  background: 'var(--surface, #141416)',
+                  color: 'var(--text-primary, #ffffff)',
+                  animation: 'tabAppear 0.2s ease forwards',
+                }}
+              >
+                <div style={{ position: 'relative', width: '56px', height: '56px', marginBottom: '20px' }}>
+                  <svg width="56" height="56" viewBox="0 0 32 32" fill="none" style={{ animation: 'spin 3s linear infinite' }}>
+                    <circle cx="16" cy="16" r="2.2" fill="#38bdf8" />
+                    <ellipse cx="16" cy="16" rx="13" ry="5.5" stroke="#38bdf8" strokeWidth="2" />
+                    <circle cx="28" cy="16" r="2" fill="#67e8f9" />
+                    <ellipse cx="16" cy="16" rx="13" ry="5.5" stroke="#60a5fa" strokeWidth="2" transform="rotate(60 16 16)" />
+                    <circle cx="10" cy="5.6" r="2" fill="#93c5fd" />
+                    <ellipse cx="16" cy="16" rx="13" ry="5.5" stroke="#818cf8" strokeWidth="2" transform="rotate(120 16 16)" />
+                    <circle cx="10" cy="26.4" r="2" fill="#c7d2fe" />
+                  </svg>
+                </div>
+                <div style={{ fontSize: '15px', fontWeight: 600, letterSpacing: '-0.01em', marginBottom: '12px' }}>
+                  Opening {KIND_TITLES[activeTabKind] || 'Document'}…
+                </div>
+                <div
+                  style={{
+                    width: '140px',
+                    height: '3px',
+                    borderRadius: '3px',
+                    background: 'rgba(255, 255, 255, 0.1)',
+                    overflow: 'hidden',
+                    position: 'relative',
+                  }}
+                >
+                  <div
+                    style={{
+                      position: 'absolute',
+                      inset: 0,
+                      width: '50%',
+                      background: 'linear-gradient(90deg, #38bdf8, #818cf8)',
+                      borderRadius: '3px',
+                      animation: 'loadingProgress 1s ease-in-out infinite',
+                    }}
+                  />
+                </div>
+              </div>
+            )}
+            <iframe
+              src={activeUrl}
+              title={activeTabTitle}
+              onLoad={() => setIframeLoading(false)}
+              style={{
+                position: 'absolute',
+                inset: 0,
+                width: '100%',
+                height: '100%',
+                border: 'none',
+                background: 'var(--surface, #141416)',
+                opacity: iframeLoading ? 0 : 1,
+                transition: 'opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1)',
+              }}
+            />
+          </>
         )}
       </div>
       {showOnboarding && homeActive && <Onboarding onDone={finishOnboarding} />}

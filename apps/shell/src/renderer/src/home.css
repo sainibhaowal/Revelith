@@ -47,6 +47,17 @@
   }
 }
 
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes loadingProgress {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(100%); }
+  100% { transform: translateX(200%); }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -176,10 +187,16 @@ body.vib .home {
   color: var(--text);
   cursor: pointer;
   text-align: left;
+  transition: all 0.16s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .nav-item:hover {
   background: var(--bg-hover);
+  transform: translateX(3px);
+}
+
+.nav-item:active {
+  transform: translateX(1px) scale(0.98);
 }
 
 .nav-item.active {
@@ -190,6 +207,11 @@ body.vib .home {
 .nav-item svg {
   flex-shrink: 0;
   color: var(--text-primary);
+  transition: transform 0.16s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-item:hover svg {
+  transform: scale(1.12);
 }
 
 .nav-label {
@@ -203,6 +225,11 @@ body.vib .home {
   font-size: 12px;
   color: var(--text-muted);
   font-variant-numeric: tabular-nums;
+  transition: transform 0.16s ease;
+}
+
+.nav-item:hover .nav-count {
+  transform: scale(1.08);
 }
 
 /* ---- bottom-left account entry (today = Genspark login, later = signup/account system) ---- */
@@ -228,10 +255,16 @@ body.vib .home {
   font: inherit;
   cursor: pointer;
   text-align: left;
+  transition: all 0.16s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .account-btn:hover {
-  background: var(--surface-subtle);
+  background: var(--bg-hover);
+  transform: translateY(-1px);
+}
+
+.account-btn:active {
+  transform: translateY(0) scale(0.98);
 }
 
 .account-avatar {
@@ -561,19 +594,27 @@ body.vib .home {
   color: var(--text-secondary);
   cursor: pointer;
   white-space: nowrap;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .filter-pill:hover,
 .cloud-seg button:hover {
   color: var(--text);
+  transform: translateY(-1px);
+}
+
+.filter-pill:active,
+.cloud-seg button:active {
+  transform: translateY(0) scale(0.96);
 }
 
 .filter-pill.active,
 .cloud-seg button.active {
   background: var(--surface);
-  color: var(--text);
+  color: var(--text-primary);
   font-weight: 600;
   box-shadow: var(--shadow-pill);
+  transform: none;
 }
 
 .empty {
