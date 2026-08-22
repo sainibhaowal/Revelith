@@ -11,3 +11,6 @@ dist/
 
 # Ignore generated test reports
 .task/
+
+# Ignore prompt template
+docs/TASK_PROMPT_TEMPLATE.md

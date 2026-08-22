@@ -111,6 +111,7 @@ const KIND_ICON: Record<TabSummary['kind'], ReactElement> = {
 export function TabBar() {
   const { t } = useI18n()
   const [tabs, setTabs] = useState<TabSummary[]>([])
+  const [closingId, setClosingId] = useState<string | null>(null)
   const stripRef = useRef<HTMLDivElement>(null)
 
   // Chrome-style drag-to-reorder: the grabbed tab tracks the pointer 1:1 while
@@ -236,7 +237,7 @@ export function TabBar() {
           return (
             <div
               key={tab.id}
-              className={`tab-item ${tab.kind === 'home' ? 'tab-home' : ''} ${tab.active ? 'active' : ''} ${dragVisual?.id === tab.id ? 'drag-source' : ''}`}
+              className={`tab-item ${tab.kind === 'home' ? 'tab-home' : ''} ${tab.active ? 'active' : ''} ${dragVisual?.id === tab.id ? 'drag-source' : ''} ${closingId === tab.id ? 'closing' : ''}`}
               style={dragStyle}
               onPointerDown={(event) => {
                 if (event.button !== 0) return
@@ -334,7 +335,10 @@ export function TabBar() {
                   aria-label={t('closeTab')}
                   onClick={(event) => {
                     event.stopPropagation()
-                    void window.aiOfficeTabs.close(tab.id)
+                    setClosingId(tab.id)
+                    setTimeout(() => {
+                      void window.aiOfficeTabs.close(tab.id)
+                    }, 140)
                   }}
                 >
                   <svg width="9" height="9" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true">
